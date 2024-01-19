@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application>
+        <meta-data
+            android:name="org.godotenine.plugin.v1.GodotSQLite"
+            android:value="sizov.godot.plugin.android.godotsqlite.GodotSQLite" />
+    </application>
+
+</manifest>
