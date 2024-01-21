@@ -4,8 +4,11 @@
 
     <application>
         <meta-data
-            android:name="org.godotenine.plugin.v1.GodotSQLite"
+            android:name="org.godotengine.plugin.v1.GodotSQLite"
             android:value="sizov.godot.plugin.android.godotsqlite.GodotSQLite" />
+        <meta-data
+            android:name="org.godotengine.plugin.v1.GodotTTS"
+            android:value="sizov.godot.plugin.android.godotsqlite.GodotTTS" />
     </application>
 
 </manifest>

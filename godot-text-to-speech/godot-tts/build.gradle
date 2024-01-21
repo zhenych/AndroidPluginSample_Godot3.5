@@ -1,0 +1,41 @@
+plugins {
+    id 'com.android.library'
+}
+
+ext.pluginVersionCode = 1
+ext.pluginVersionName = "1.1.0"
+
+android {
+    compileSdkVersion 32
+
+    defaultConfig {
+        minSdkVersion 18
+        targetSdkVersion 32
+        versionCode pluginVersionCode
+        versionName pluginVersionName
+
+        consumerProguardFiles 'consumer-rules.pro'
+    }
+
+    libraryVariants.all { variant ->
+        variant.outputs.all { output ->
+            output.outputFileName = "GodotTTS.$pluginVersionName.${variant.name}.aar"
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    buildToolsVersion '30.0.3'
+}
+
+dependencies {
+    implementation 'io.github.m4gr3d:godot:3.5.1.stable'
+
+    implementation "androidx.legacy:legacy-support-v4:1.0.0"
+
+    compileOnly project(':godot-lib.release')
+}
